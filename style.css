@@ -310,11 +310,12 @@ body {
     }
 
     .stats-arrow {
-        position: static;
+        position: absolute;
+        right: -70px;
+        bottom: -40px;
         width: 82px;
         height: 100px;
-        margin: 20px auto 0;
-        transform: none;
+        margin: 0;
     }
 }
 
@@ -432,21 +433,21 @@ body {
     }
 
     .stat-card:nth-child(1) .stat-card__image {
-        width: 135%;
-        left: -16%;
-        bottom: -13%;
+        width: 115%;
+        left: -4%;
+        bottom: -8%;
     }
 
     .stat-card:nth-child(2) .stat-card__image {
-        width: 165%;
-        left: -18%;
-        bottom: -15%;
+        width: 160%;
+        left: -33%;
+        bottom: -29%;
     }
 
     .stat-card:nth-child(3) .stat-card__image {
-        width: 135%;
-        left: -22%;
-        bottom: -12%;
+        width: 115%;
+        left: -5%;
+        bottom: -8%;
     }
 
     .stats-text {
@@ -459,6 +460,20 @@ body {
     }
 
     .stats-arrow {
+        width: 76px;
+        height: 92px;
+    }
+    .stats-text {
+        position: relative;
+        max-width: 300px;
+        padding-right: 70px;
+        text-align: left;
+    }
+
+    .stats-arrow {
+        position: absolute;
+        right: -10px;
+        bottom: -35px;
         width: 76px;
         height: 92px;
     }
@@ -491,4 +506,26 @@ body {
         width: 68px;
         height: 84px;
     }
+}
+
+@media (max-width: 380px) {
+
+    .stat-card:nth-child(1) .stat-card__image {
+        width: 120%;
+        left: -10%;
+        bottom: -10%;
+    }
+
+    .stat-card:nth-child(2) .stat-card__image {
+        width: 160%;
+        left: -28%;
+        bottom: -12%;
+    }
+
+    .stat-card:nth-child(3) .stat-card__image {
+        width: 120%;
+        left: -15%;
+        bottom: -10%;
+    }
+
 }
