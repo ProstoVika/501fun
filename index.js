@@ -1,20 +1,23 @@
 const cards = [
     {
-        value: "More than 12,000,000",
+        prefix: "More than",
+        value: "12,000,000",
         theme: "hands",
         label: "delighted guests",
         image: "./images/Delighted guests.png",
         alt: "Hands illustration"
     },
     {
-        value: "Find us in 50",
+        prefix: "Find us in",
+        value: "50",
         theme: "globe",
         label: "countries",
         image: "./images/Find us.png",
         alt: "Globe illustration"
     },
     {
-        value: "Over 800,000,000",
+        prefix: "Over",
+        value: "800,000,000",
         theme: "darts",
         label: "darts thrown",
         image: "./images/Darts thrown.png",
@@ -28,6 +31,7 @@ const statsSection = document.querySelector("#statsSection");
 const createCardTemplate = (card) => `
   <article class="stat-card ${card.theme}">
     <div class="stat-card__content">
+      <p class="stat-card__prefix">${card.prefix}</p>
       <h3 class="stat-card__value">${card.value}</h3>
       <p class="stat-card__label">${card.label}</p>
     </div>
@@ -57,6 +61,7 @@ const initScrollAnimation = () => {
 
     statsSection && observer.observe(statsSection);
 };
+
 document.addEventListener("DOMContentLoaded", () => {
     renderCards();
     initScrollAnimation();
