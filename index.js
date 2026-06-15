@@ -45,11 +45,7 @@ const createCardTemplate = (card) => `
 `;
 
 const renderCards = () => {
-    if (!cardsGrid) return;
-
-    cardsGrid.innerHTML = cards
-        .map(createCardTemplate)
-        .join("");
+    cardsGrid ? cardsGrid.innerHTML = cards.map(createCardTemplate).join("") : null;
 };
 
 const initScrollAnimation = () => {
@@ -67,7 +63,6 @@ const initScrollAnimation = () => {
 
     observer.observe(statsSection);
 };
-
 document.addEventListener("DOMContentLoaded", () => {
     renderCards();
     initScrollAnimation();
